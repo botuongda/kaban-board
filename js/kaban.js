@@ -1,6 +1,7 @@
 /**
  * Created by botuongda on 12/15/2016.
  */
+dem()
 function them_moi(key,vitri,dulieu) {
     var str=$(dulieu).val()
     var event = window.event || key
@@ -9,9 +10,7 @@ function them_moi(key,vitri,dulieu) {
     {
         themdong(vitri,str)
         $(dulieu).val("")
-        $($("h5")[0]).text('TODO : ' + $("#todo li").length )
-        $($("h5")[1]).text('DOING : ' + $("#doing li").length )
-        $($("h5")[2]).text('DONE : ' + $("#done li").length )
+        dem()
     }
 
 
@@ -36,14 +35,19 @@ function xoa(n) {
     item=$(item).parent()
     item=$(item).parent()
     item.remove()
+    dem()
     }
     })
     console.log(n)
 }
 
-$($("h5")[0]).text('TODO : ' + $("#todo li").length )
-$($("h5")[1]).text('DOING : ' + $("#doing li").length )
-$($("h5")[2]).text('DONE : ' + $("#done li").length )
+
+function dem() {
+    $($("h5")[0]).text('TODO : ' + $("#todo li").length )
+    $($("h5")[1]).text('DOING : ' + $("#doing li").length )
+    $($("h5")[2]).text('DONE : ' + $("#done li").length )
+}
+
 
 
 
