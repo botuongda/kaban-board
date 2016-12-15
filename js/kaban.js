@@ -3,7 +3,7 @@
  */
 function them_moi(key,vitri,dulieu) {
     var str=$(dulieu).val()
-    var key = window.event
+    var event = window.event || key
     var i=key.keyCode
     if(i===13 && str.trim() !== '')
     {
