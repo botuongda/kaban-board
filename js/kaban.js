@@ -1,6 +1,11 @@
 /**
  * Created by botuongda on 12/15/2016.
  */
+function dem() {
+    $($("h5")[0]).text('TODO : ' + $("#todo li").length )
+    $($("h5")[1]).text('DOING : ' + $("#doing li").length )
+    $($("h5")[2]).text('DONE : ' + $("#done li").length )
+}
 dem()
 function them_moi(key,vitri,dulieu) {
     var str=$(dulieu).val()
