@@ -4,12 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/kaban.css">
-	<title>Công ty TNHH Trọng Liên - Hân hạnh giới thiệu </title>
+	<title> Kaban Broad </title>
 </head>
 <body>
 	
@@ -39,16 +38,16 @@
       <div class="col s12 m4">
 		  <div class="card">
 			  <h5> TODO </h5>
-			  <div class="collection sapxep">
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
+			  <div class="collection sapxep" id="todo">
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
 
 			  </div>
               <div class="input-field col s12">
 
-                  <input value="" id="new_job" type="text" class="validate"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+                  <input value="" id="new_job" type="text" class="validate" onkeydown="them_moi(event,'todo',this)"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
 
                   <label class="active" for="new_job">Thêm mới</label>
               </div>
@@ -58,15 +57,15 @@
       <div class="col s12 m4">
 		  <div class="card">
 			  <h5> DOING </h5>
-			  <div class="collection sapxep">
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
+			  <div class="collection sapxep" id="doing">
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
 			  </div>
               <div class="input-field col s12">
 
-                  <input value="" id="new_job" type="text" class="validate"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+                  <input value="" id="new_job" type="text" class="validate" onkeydown="them_moi(event,'doing',this)"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
 
                   <label class="active" for="new_job">Thêm mới</label>
 			  </div>
@@ -77,15 +76,15 @@
       <div class="col s12 m4">
 		  <div class="card">
 				<h5> DONE </h5>
-			  <div class="collection sapxep">
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item active"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></div></li>
+			  <div class="collection sapxep" id="done">
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item active"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
+				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
 			  </div>
               <div class="input-field col s12">
 
-                  <input value="" id="new_job" type="text" class="validate"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
+                  <input value="" id="new_job" type="text" class="validate" onkeydown="them_moi(event,'done',this)"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
 
                   <label class="active" for="new_job">Thêm mới</label>
               </div>
@@ -94,15 +93,29 @@
      </div>
 
 	</section>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+          <div class="modal-content">
+              <h4> Xóa nhé </h4>
+              <p>Xóa là phải gõ lại từ đầu đấy </p>
+          </div>
+          <div class="modal-footer">
+              <button class="modal-action modal-close waves-effect waves-light btn"> Ừ </button>
+              <button class="modal-action modal-close waves-effect brown darken-3 btn" > Thôi vậy ! </button>
+          </div>
+      </div>
 </body>
 	<script type="text/javascript" src="js/jquery-3-1-1.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
 	<script src="js/jquery-ui.min.js"></script>
+    <script src="js/kaban.js"></script>
 	<script>
 		$( function() {
 			$( ".sapxep" ).sortable({
 				connectWith: ".sapxep"
+//                placeholder: "ui-state-highlight"
 			})
 		} );
 		$(document).ready(function() {
