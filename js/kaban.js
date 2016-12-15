@@ -9,6 +9,9 @@ function them_moi(key,vitri,dulieu) {
     {
         themdong(vitri,str)
         $(dulieu).val("")
+        $($("h5")[0]).text('TODO : ' + $("#todo li").length )
+        $($("h5")[1]).text('DOING : ' + $("#doing li").length )
+        $($("h5")[2]).text('DONE : ' + $("#done li").length )
     }
 
 
@@ -37,6 +40,12 @@ function xoa(n) {
     })
     console.log(n)
 }
+
+$($("h5")[0]).text('TODO : ' + $("#todo li").length )
+$($("h5")[1]).text('DOING : ' + $("#doing li").length )
+$($("h5")[2]).text('DONE : ' + $("#done li").length )
+
+
 
 
 $(document).ready(function(){
