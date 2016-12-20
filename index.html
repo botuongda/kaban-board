@@ -39,12 +39,7 @@
 		  <div class="card">
 			  <h5> TODO </h5>
 			  <div class="collection sapxep" id="todo">
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-
-			  </div>
+              </div>
               <div class="input-field col s12">
 
                   <input value="" id="new_job" type="text" class="validate" onkeydown="them_moi(event,'todo',this)"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
@@ -58,10 +53,6 @@
 		  <div class="card">
 			  <h5> DOING </h5>
 			  <div class="collection sapxep" id="doing">
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
 			  </div>
               <div class="input-field col s12">
 
@@ -77,11 +68,7 @@
 		  <div class="card">
 				<h5> DONE </h5>
 			  <div class="collection sapxep" id="done">
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item active"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-				  <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="fa fa-trash fa-lg" aria-hidden="true" onclick="xoa(this)"></i></a></div></li>
-			  </div>
+				 </div>
               <div class="input-field col s12">
 
                   <input value="" id="new_job" type="text" class="validate" onkeydown="them_moi(event,'done',this)"><a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
@@ -92,7 +79,6 @@
       </div>
      </div>
 
-	</section>
 
       <!-- Modal Structure -->
       <div id="modal1" class="modal">
@@ -112,14 +98,6 @@
 	<script src="js/jquery-ui.min.js"></script>
     <script src="js/kaban.js"></script>
 	<script>
-		$( function() {
-			$( ".sapxep" ).sortable({
-				connectWith: ".sapxep"
-//                placeholder: "ui-state-highlight"
-			})
-		} );
-		$(document).ready(function() {
-			Materialize.updateTextFields();
-		});
+
 	</script>
 </html>
