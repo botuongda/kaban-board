@@ -47,16 +47,22 @@ function them_moi(key,vitri,input) {
     var i=key.keyCode;
     if(i===13 && str.trim() !== '')
     {
-        themdong(vitri,str);
-        $(input).val("");
         dem();
-        // lưu dữ liệu
-        if (!list[vitri]){list[vitri]=[]}
-        list[vitri].push(str); //gán giá trị vào mảng list
-        // console.log(list);
+        var gioihan= $("#"+ vitri + " li").length //biến giới hạn số dòng cho list
 
-        console.log(dulieu.getData());
-        dulieu.luuData(list); //lưu dữ liệu vào local
+        if (gioihan<4){
+            themdong(vitri,str);
+            $(input).val("");
+
+            // lưu dữ liệu
+            if (!list[vitri]){list[vitri]=[]}
+            list[vitri].push(str); //gán giá trị vào mảng list
+
+            console.log(dulieu.getData());
+            dulieu.luuData(list); //lưu dữ liệu vào local
+        }
+        else {alert("bạn chỉ được nhập 4 dòng thôi")}
+
 
     }
 
@@ -124,8 +130,37 @@ $( function() {
     dem()                               //hiện thị số lượng dòng và cột ngay sau khi hiển thị lại
 
     $( ".sapxep" ).sortable({
-        connectWith: ".sapxep"
-//                placeholder: "ui-state-highlight"
+        connectWith: ".sapxep",
+        placeholder: "highlight",
+        start: function (event,ui){
+
+            ui.item.vitricot_old = ui.item[0].parentElement.getAttribute('id'); // vị trí cột
+            ui.item.vitritrongchuoi_old = ui.item.index()                   //vị trí của phần tử trong chuỗi --- gán thêm giá trị cho ui.item.
+            console.log(ui.item.vitricot_old)
+            //console.log(list[vitricot_old][vitritrongchuoi_old])
+
+
+        },
+        stop: function (envent,ui){
+            var i=ui.item
+            var vitricot_new = ui.item[0].parentElement.getAttribute('id');
+            var vitritrongchuoi_new = ui.item.index();
+            var vitricot_cu = i.vitricot_old;
+            var vitritrongchuoi_cu= i.vitritrongchuoi_old;
+
+            console.log(list[vitricot_cu][vitritrongchuoi_cu]);
+            //xóa vị trí cũ
+            list[vitricot_cu].splice(vitritrongchuoi_cu,1);
+            //console.log(list);
+            //thêm vào vị trí mới
+            list[vitricot_new].splice(vitritrongchuoi_new,0,i[0].innerText);
+            //console.log(i[0].innerText)
+            //console.log(i[0].innerHTML)
+            //console.log(list);
+            dem()
+            dulieu.luuData(list)
+        }
+
     })
 } );
 $(document).ready(function() {
