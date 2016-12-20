@@ -103,13 +103,6 @@ function dem() {
 
 }
 
-
-    
-
-
-
-
-
 $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
@@ -147,18 +140,22 @@ $( function() {
             var vitritrongchuoi_new = ui.item.index();
             var vitricot_cu = i.vitricot_old;
             var vitritrongchuoi_cu= i.vitritrongchuoi_old;
+            if (list['doing'].length < 3){
 
-            console.log(list[vitricot_cu][vitritrongchuoi_cu]);
-            //xóa vị trí cũ
-            list[vitricot_cu].splice(vitritrongchuoi_cu,1);
-            //console.log(list);
-            //thêm vào vị trí mới
-            list[vitricot_new].splice(vitritrongchuoi_new,0,i[0].innerText);
-            //console.log(i[0].innerText)
-            //console.log(i[0].innerHTML)
-            //console.log(list);
-            dem()
-            dulieu.luuData(list)
+                console.log(list[vitricot_cu][vitritrongchuoi_cu]);
+                //xóa vị trí cũ
+                list[vitricot_cu].splice(vitritrongchuoi_cu,1);
+                //console.log(list);
+                //thêm vào vị trí mới
+                list[vitricot_new].splice(vitritrongchuoi_new,0,i[0].innerText);
+                //console.log(i[0].innerText) hiện text trong thẻ
+                //console.log(i[0].innerHTML) hiện code trong thẻ
+                //console.log(list);
+                dem()
+                dulieu.luuData(list)
+            }
+            else {alert("Doing job chỉ có 3 việc thôi")}
+
         }
 
     })
